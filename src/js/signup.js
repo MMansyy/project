@@ -99,7 +99,7 @@ signupButton.addEventListener("click", (e) => {
         password: passwordInput.value.trim()
     });
     setCookie("users", JSON.stringify(user), 7);
-    window.location.href = "./index.html";
+    window.location.href = "../../index.html";
 });
 
 

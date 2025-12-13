@@ -56,7 +56,7 @@ signupButton.addEventListener("click", (e) => {
     let password = passwordInput.value;
     let existingUser = users.find(u => u.username === username && u.password === password);
     if (existingUser) {
-        window.location.href = "home.html";
+        window.location.href = "./src/pages/home.html";
     } else {
         let errorDiv = document.getElementById("error-message");
         errorDiv.textContent = "Invalid username or password.";
