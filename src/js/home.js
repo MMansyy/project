@@ -24,9 +24,9 @@ const fetchData = () => {
 }
 
 const renderSlides = () => {
-    data.forEach((product) => {
+    data.forEach((product, i) => {
         const slideHTML = `
-            <div class="slide">
+            <div data-id=${i} class="slide ">
                 <img src="${product.thumbnail}" class="" alt="${product.title}">
                 <div class="caption text-center text-white bg-dark bg-opacity-50 p-2 position-absolute bottom-0 w-100">
                     <h5>${product.title}</h5>
@@ -36,6 +36,20 @@ const renderSlides = () => {
         slidesContainer.innerHTML += slideHTML;
     });
 }
+
+slidesContainer.addEventListener('click', (event) => {
+    const slide = event.target.closest('.slide');
+    if (slide) {
+        const productId = slide.getAttribute('data-id');
+        showProductDetails(productId);
+    }
+})
+
+
+
+let autoSlideInterval = setInterval(() => {
+    nextBtn.click();
+}, 5000)
 
 const updateSliderPosition = () => {
     slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
