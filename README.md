@@ -29,7 +29,6 @@ A simple and elegant user authentication and e-commerce web application built wi
 ## 📁 Project Structure
 
 ```
-project/
 ├── index.html              # Login page (landing page)
 ├── src/
 │   ├── js/
@@ -41,8 +40,7 @@ project/
 │   │   ├── signup.html     # Registration page
 │   │   └── home.html       # Products page with slider
 │   └── style/
-│       ├── home.css        # Home page styles
-│       └── main.css        # Global styles
+│       └── home.css        # Home page custom styles
 └── README.md
 ```
 
@@ -58,10 +56,14 @@ project/
 1. Clone the repository:
    ```bash
    git clone https://github.com/MMansyy/project.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
    cd project
    ```
 
-2. Open with a local web server (recommended):
+3. Open with a local web server (recommended):
    
    **Option 1: Using Python**
    ```bash
@@ -78,7 +80,7 @@ project/
    - Install the "Live Server" extension
    - Right-click on `index.html` and select "Open with Live Server"
 
-3. Open your browser and navigate to:
+4. Open your browser and navigate to:
    ```
    http://localhost:8000
    ```
