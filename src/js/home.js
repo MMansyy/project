@@ -11,7 +11,7 @@ let currentIndex = 0;
 
 const fetchData = () => {
     let connection = new XMLHttpRequest();
-    connection.open("GET", "https://dummyjson.com/products");
+    connection.open("GET", "https://dummyjson.com/products?limit=0");
     connection.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             let response = JSON.parse(this.responseText);
@@ -26,7 +26,7 @@ const fetchData = () => {
 const renderSlides = () => {
     data.forEach((product, i) => {
         const slideHTML = `
-            <div data-id=${i} class="slide ">
+            <div data-id=${i} class="slide">
                 <img src="${product.thumbnail}" class="" alt="${product.title}">
                 <div class="caption text-center text-white bg-dark bg-opacity-50 p-2 position-absolute bottom-0 w-100">
                     <h5>${product.title}</h5>
